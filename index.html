@@ -49,13 +49,18 @@
         extend: {
           colors: {
             brand: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
+              50: '#f2fbf6',
+              100: '#e1f7eb',
               500: '#10b981',
               600: '#059669',
               700: '#047857',
               800: '#065f46',
               900: '#064e3b'
+            },
+            surface: {
+              subtle: '#f8fafc',
+              card: '#ffffff',
+              border: '#e2e8f0'
             }
           },
           fontFamily: {
@@ -69,18 +74,22 @@
     .modal-active { display: flex !important; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-700 selection:text-white pb-20 md:pb-0">
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-brand-700 selection:text-white pb-20 md:pb-0">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+  <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
       <p class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
         <span data-i18n="top_alert">भभुआ और कैमूर : ज़मीन खरीद-बिक्री, मकान, फ्लैट और दुकान किराए पर उपलब्ध</span>
       </p>
-      <div class="flex items-center gap-4 text-xs">
-        <a href="mailto:vistaraproperty11@gmail.com" class="text-slate-300 hover:text-white flex items-center gap-1.5 transition"><i class="fa-solid fa-envelope text-brand-500"></i> vistaraproperty11@gmail.com</a>
-        <a href="tel:+918709596282" class="text-white hover:text-brand-400 font-semibold transition"><i class="fa-solid fa-phone"></i> +91 8709596282</a>
+      <div class="flex items-center gap-5 text-xs">
+        <a href="mailto:vistaraproperty11@gmail.com" class="text-slate-300 hover:text-white flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-envelope text-brand-500"></i> vistaraproperty11@gmail.com
+        </a>
+        <a href="tel:+918709596282" class="text-white hover:text-brand-400 font-semibold transition">
+          <i class="fa-solid fa-phone"></i> +91 8709596282
+        </a>
       </div>
     </div>
   </div>
@@ -91,7 +100,7 @@
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-800 to-emerald-600 text-white flex items-center justify-center font-black text-2xl shadow-lg shadow-brand-700/30">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-900 to-emerald-600 text-white flex items-center justify-center font-black text-2xl shadow-lg shadow-brand-700/25">
           VP
         </div>
         <div>
@@ -133,7 +142,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative bg-gradient-to-b from-brand-50 via-emerald-50/30 to-slate-50 pt-12 pb-20 px-4 overflow-hidden">
+  <section id="home" class="relative bg-gradient-to-b from-emerald-50/70 via-slate-100/50 to-[#f8fafc] pt-12 pb-20 px-4 overflow-hidden border-b border-slate-200/70">
     <div class="max-w-6xl mx-auto text-center relative z-10">
       
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-200 shadow-sm text-xs font-bold text-brand-800 mb-6">
@@ -161,11 +170,11 @@
         <a href="#properties" class="px-6 py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-xl shadow-brand-700/25 transition flex items-center gap-2">
           <i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="btn_browse">प्रॉपर्टी और रेंटल लिस्ट देखें</span>
         </a>
-        <a href="#panchayats" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition flex items-center gap-2">
-          <i class="fa-solid fa-map-location-dot"></i> <span data-i18n="btn_panchayats_view">गांव व पंचायत लिस्ट देखें</span>
+        <a href="#panchayats" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-sm shadow-md transition flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot text-emerald-400"></i> <span data-i18n="btn_panchayats_view">गांव व पंचायत लिस्ट देखें</span>
         </a>
-        <a href="#lead-engine" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-sm shadow-md transition flex items-center gap-2">
-          <i class="fa-solid fa-key text-emerald-400"></i> <span data-i18n="btn_rent_action">फ्लैट / दुकान रेंट पर लें या दें</span>
+        <a href="#lead-engine" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-bold text-sm shadow-sm transition flex items-center gap-2">
+          <i class="fa-solid fa-key text-brand-700"></i> <span data-i18n="btn_rent_action">फ्लैट / दुकान रेंट पर लें या दें</span>
         </a>
       </div>
 
@@ -201,13 +210,21 @@
         <p class="text-sm text-slate-500 mt-1" data-i18n="sec_prop_sub">अपनी पसंद अनुसार फिल्टर करके तुरंत ओनर से सीधा संपर्क करें</p>
       </div>
 
-      <!-- Filter Buttons -->
+      <!-- Filter Buttons (NO FIRE EMOJI, ALL PROFESSIONAL ICONS) -->
       <div class="flex flex-wrap gap-2" id="filterTabs">
         <button onclick="filterProperties('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-700 text-white shadow transition" data-filter="all" data-i18n="filter_all">सभी (All)</button>
-        <button onclick="filterProperties('flat_rent')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white shadow-sm transition" data-filter="flat_rent" data-i18n="filter_flat">🏠 फ्लैट किराए पर (Flat Rent)</button>
-        <button onclick="filterProperties('shop_rent')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-white shadow-sm transition" data-filter="shop_rent" data-i18n="filter_shop">🔥 दुकान किराए पर (Shop Rent)</button>
-        <button onclick="filterProperties('plot')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition" data-filter="plot" data-i18n="filter_plot">रेजिडेंशियल प्लॉट (डिसमिल)</button>
-        <button onclick="filterProperties('farm')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition" data-filter="farm" data-i18n="filter_farm">खेती की ज़मीन (बीघा)</button>
+        <button onclick="filterProperties('flat_rent')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" data-filter="flat_rent">
+          <i class="fa-solid fa-house-user text-indigo-600"></i> <span data-i18n="filter_flat">फ्लैट किराए पर (Flat Rent)</span>
+        </button>
+        <button onclick="filterProperties('shop_rent')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" data-filter="shop_rent">
+          <i class="fa-solid fa-store text-amber-600"></i> <span data-i18n="filter_shop">दुकान किराए पर (Shop Rent)</span>
+        </button>
+        <button onclick="filterProperties('plot')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" data-filter="plot">
+          <i class="fa-solid fa-map-pin text-emerald-600"></i> <span data-i18n="filter_plot">रेजिडेंशियल प्लॉट (डिसमिल)</span>
+        </button>
+        <button onclick="filterProperties('farm')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" data-filter="farm">
+          <i class="fa-solid fa-tractor text-amber-700"></i> <span data-i18n="filter_farm">खेती की ज़मीन (बीघा)</span>
+        </button>
       </div>
     </div>
 
@@ -215,7 +232,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="propertiesContainer">
       
       <!-- Card 1: Flat for Rent -->
-      <div class="property-card bg-white rounded-2xl border-2 border-indigo-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="flat_rent">
+      <div class="property-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="flat_rent">
         <div>
           <div class="relative h-48 bg-slate-200 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="2 BHK Flat for Rent in Bhabua" class="w-full h-full object-cover" />
@@ -231,7 +248,7 @@
               <i class="fa-solid fa-location-dot"></i> <span data-i18n="c1_loc">कचहरी रोड, पटेल चौक के पास, भभुआ</span>
             </div>
             <h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="c1_title">2 BHK सेमी-फर्निश्ड फैमिली फ्लैट</h3>
-            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100 mb-4">
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 mb-4">
               <div><span class="text-slate-400" data-i18n="lbl_flat_config">कमरे :</span> <strong data-i18n="c1_rooms">2 बेडरूम + हॉल + किचन</strong></div>
               <div><span class="text-slate-400" data-i18n="lbl_washroom">वॉशरूम :</span> <strong data-i18n="c1_baths">1 वेस्टर्न + 1 इंडियन</strong></div>
               <div><span class="text-slate-400" data-i18n="lbl_water_elec">पानी व बिजली :</span> <strong data-i18n="c1_water">24 घंटे बोरिंग पानी</strong></div>
@@ -240,7 +257,7 @@
           </div>
         </div>
         <div class="p-5 pt-0 flex gap-2">
-          <button onclick="openInquiryModal('कचहरी रोड - 2 BHK फ्लैट रेंट (₹8,500/माह)')" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition text-center" data-i18n="btn_rent_flat_inq">फ्लैट देखने के लिए संपर्क करें</button>
+          <button onclick="openInquiryModal('कचहरी रोड - 2 BHK फ्लैट रेंट (₹8,500/माह)')" class="flex-1 py-2.5 bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold rounded-xl transition text-center" data-i18n="btn_rent_flat_inq">फ्लैट देखने के लिए संपर्क करें</button>
           <a href="https://wa.me/918709596282?text=Mujhe%20Kachhari%20Road%20wale%202%20BHK%20Flat%20(₹8500)%20ke%20bare%20me%20baat%20karni%20hai." target="_blank" class="w-10 h-10 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-800 flex items-center justify-center transition">
             <i class="fa-brands fa-whatsapp text-lg"></i>
           </a>
@@ -248,12 +265,12 @@
       </div>
 
       <!-- Card 2: Commercial Shop for Rent -->
-      <div class="property-card bg-white rounded-2xl border-2 border-amber-300 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="shop_rent">
+      <div class="property-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="shop_rent">
         <div>
           <div class="relative h-48 bg-slate-200 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" alt="Commercial Shop for Rent in Ekta Chowk Bhabua" class="w-full h-full object-cover" />
             <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow" data-i18n="card_shop_badge">
-              <i class="fa-solid fa-shop"></i> दुकान किराए पर उपलब्ध
+              <i class="fa-solid fa-store"></i> दुकान किराए पर उपलब्ध
             </span>
             <span class="absolute bottom-3 right-3 bg-slate-900/90 text-amber-300 text-xs font-bold px-3 py-1 rounded-md backdrop-blur-sm">
               ₹12,000 / माह
@@ -264,7 +281,7 @@
               <i class="fa-solid fa-location-dot"></i> <span data-i18n="c2_loc">एकता चौक मेन मार्केट, भभुआ</span>
             </div>
             <h3 class="text-base font-bold text-slate-900 mb-2" data-i18n="c2_title">ग्राउंड फ्लोर पर रेडी टू मूव कमर्शियल दुकान</h3>
-            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-amber-50/60 p-2.5 rounded-xl border border-amber-100 mb-4">
+            <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 mb-4">
               <div><span class="text-slate-400" data-i18n="lbl_size">साइज़ :</span> <strong>12 x 20 फीट (240 sq ft)</strong></div>
               <div><span class="text-slate-400" data-i18n="lbl_suitable">उपयुक्त :</span> <strong data-i18n="c2_suit">कपड़ा, दवा, मोबाइल या ऑफिस</strong></div>
               <div><span class="text-slate-400" data-i18n="lbl_amenities">सुविधा :</span> <strong data-i18n="c2_amen">शटर, टाइल्स, बिजली मीटर</strong></div>
@@ -273,7 +290,7 @@
           </div>
         </div>
         <div class="p-5 pt-0 flex gap-2">
-          <button onclick="openInquiryModal('एकता चौक - कमर्शियल दुकान रेंट (₹12,000/माह)')" class="flex-1 py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition text-center" data-i18n="btn_rent_shop_inq">दुकान किराए के लिए बात करें</button>
+          <button onclick="openInquiryModal('एकता चौक - कमर्शियल दुकान रेंट (₹12,000/माह)')" class="flex-1 py-2.5 bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold rounded-xl transition text-center" data-i18n="btn_rent_shop_inq">दुकान किराए के लिए बात करें</button>
           <a href="https://wa.me/918709596282?text=Mujhe%20Ekta%20Chowk%20wali%20Rent%20Shop%20(₹12000)%20ke%20bare%20me%20baat%20karni%20hai." target="_blank" class="w-10 h-10 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-800 flex items-center justify-center transition">
             <i class="fa-brands fa-whatsapp text-lg"></i>
           </a>
@@ -319,13 +336,13 @@
   <!-- Special Interactive Section: Clickable 22 Panchayats & 11 Blocks with Village Details -->
   <section id="panchayats" class="py-16 px-4 max-w-6xl mx-auto">
     <div class="text-center mb-10">
-      <span class="text-xs font-extrabold uppercase tracking-wider text-brand-700 bg-brand-100 px-3 py-1 rounded-md" data-i18n="coverage_badge">Interactive Directory</span>
+      <span class="text-xs font-extrabold uppercase tracking-wider text-brand-700 bg-brand-50 px-3 py-1 rounded-md border border-brand-200" data-i18n="coverage_badge">Interactive Directory</span>
       <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2" data-i18n="panch_head">भभुआ ब्लॉक की सभी 22 पंचायतें और कैमूर के 11 ब्लॉक</h2>
       <p class="text-sm text-slate-600 mt-1" data-i18n="panch_sub">👇 <strong>किसी भी पंचायत या ब्लॉक पर क्लिक करें</strong> — उसके अंदर आने वाले सभी गांवों और मजरों की लिस्ट तुरंत देखें!</p>
     </div>
 
     <!-- Bhabua Block 22 Panchayats (CLICKABLE TILES) -->
-    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md mb-8">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-8">
       <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
         <div class="flex items-center gap-2">
           <span class="w-3.5 h-3.5 rounded-full bg-brand-600"></span>
@@ -335,7 +352,7 @@
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 text-xs font-bold text-slate-800" id="panchayatTilesContainer">
-        <!-- Rendered via JS for high efficiency and click handlers -->
+        <!-- Rendered via JS -->
       </div>
     </div>
 
@@ -662,7 +679,7 @@
           </div>
 
           <div class="pt-2 flex flex-col sm:flex-row gap-3">
-            <button type="submit" class="flex-1 py-3.5 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+            <button type="submit" class="flex-1 py-3.5 px-6 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-lg shadow-brand-700/30 transition flex items-center justify-center gap-2">
               <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_submit_rent">रेंट इन्क्वायरी सबमिट करें</span>
             </button>
             <button type="button" onclick="sendRentOnWhatsApp()" class="py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
@@ -913,7 +930,7 @@
       { name: "22. भभुआ नगर व बाईपास", hi: "भभुआ नगर", en: "Bhabua Town", villages: ["एकता चौक", "कचहरी रोड", "पटना रोड मोड़", "चैनपुर रोड बाईपास", "मोहनिया रोड लिंक", "पटेल चौक", "सुभाष चौक"] }
     ];
 
-    // Complete Directory of Kaimur 10 Blocks with Headquarters & Key Panchayats/Villages
+    // Complete Directory of Kaimur 10 Blocks with Key Circles
     const kaimurBlocksData = [
       { 
         name: "चैनपुर (Chainpur)", 
@@ -975,7 +992,7 @@
       bhabuaPanchayatsData.forEach((p, idx) => {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'p-3 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-500 text-left transition flex items-center justify-between group shadow-sm';
+        btn.className = 'p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-brand-500 text-left transition flex items-center justify-between group shadow-xs';
         btn.innerHTML = `
           <span class="group-hover:text-brand-800 transition">${p.name}</span>
           <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-brand-600 transition"></i>
@@ -1007,7 +1024,7 @@
       selectedAreaName = data.hi;
       document.getElementById('modalAreaType').innerText = "Gram Panchayat (Bhabua Block)";
       document.getElementById('modalAreaTitle').innerText = data.name;
-      document.getElementById('modalAreaDesc').innerText = `इस ग्राम पंचायत के अंतर्गत कुल 287 राजस्व गांवों में से प्रमुख मुख्य गांव और टोले :`;
+      document.getElementById('modalAreaDesc').innerText = `इस ग्राम पंचायत के अंतर्गत कुल राजस्व गांवों में से प्रमुख मुख्य गांव और टोले :`;
 
       const listContainer = document.getElementById('modalVillagesList');
       listContainer.innerHTML = '';
@@ -1066,7 +1083,7 @@
 
       sellBtn.className = 'py-3 text-center font-bold text-xs sm:text-sm rounded-2xl transition text-slate-600 hover:text-slate-900 flex items-center justify-center gap-1.5';
       buyBtn.className = 'py-3 text-center font-bold text-xs sm:text-sm rounded-2xl transition text-slate-600 hover:text-slate-900 flex items-center justify-center gap-1.5';
-      rentBtn.className = 'py-3 text-center font-bold text-xs sm:text-sm rounded-2xl transition text-slate-600 hover:text-slate-900 flex items-center justify-center gap-1.5';
+      rentBtn.className = 'py-3 text-center font-bold text-xs sm:text-sm rounded-2xl transition text-indigo-700 hover:text-indigo-900 flex items-center justify-center gap-1.5';
 
       if (tab === 'sell') {
         sellSec.classList.remove('hidden');
@@ -1087,9 +1104,9 @@
 
       buttons.forEach(btn => {
         if(btn.dataset.filter === category) {
-          btn.className = 'filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-700 text-white shadow transition';
+          btn.className = 'filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-700 text-white shadow transition flex items-center gap-1.5';
         } else {
-          btn.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition';
+          btn.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5';
         }
       });
 
@@ -1206,13 +1223,12 @@
       closeInquiryModal();
     }
 
-    // Bilingual Dictionary
+    // Bilingual Translation Dictionary (Syncs Everywhere on Desktop and Mobile)
     let currentLang = 'hi';
     const dict = {
       en: {
         btn_text: 'हिंदी',
         top_alert: 'Bhabua and Kaimur : Land sale-purchase, houses, flats, and commercial shops on rent',
-        timing: '<i class="fa-regular fa-clock text-brand-500"></i> Mon - Sun : 8 AM - 9 PM',
         tagline: 'Bhabua and Kaimur Realty and Rentals',
         nav_home: 'Home',
         nav_properties: 'Properties',
@@ -1236,8 +1252,8 @@
         sec_prop_title: 'Bhabua and Kaimur : Lands, Houses, Shops, and Flats',
         sec_prop_sub: 'Filter according to your preference and connect directly with verified owners',
         filter_all: 'All',
-        filter_flat: '🏠 Flats on Rent',
-        filter_shop: '🔥 Shops on Rent',
+        filter_flat: 'Flats on Rent',
+        filter_shop: 'Shops on Rent',
         filter_plot: 'Residential Plots (Decimil)',
         filter_farm: 'Agricultural Land (Bigha)',
         card_flat_badge: '<i class="fa-solid fa-house-chimney-window"></i> Flat for Rent',
@@ -1252,7 +1268,7 @@
         lbl_parking: 'Parking :',
         c1_park: 'Bike and Small Car Parking',
         btn_rent_flat_inq: 'Inquire to Visit Flat',
-        card_shop_badge: '<i class="fa-solid fa-shop"></i> Shop for Rent',
+        card_shop_badge: '<i class="fa-solid fa-store"></i> Shop for Rent',
         c2_loc: 'Ekta Chowk Main Market, Bhabua',
         c2_title: 'Ground Floor Ready-to-Move Commercial Shop',
         lbl_size: 'Size :',
@@ -1298,6 +1314,7 @@
         emi_years: 'Tenure (Years) :',
         emi_monthly: 'Estimated Monthly EMI',
         emi_btn: 'Get Loan Help',
+        coverage_badge: 'Local Coverage',
         forms_head: 'Sell, Buy, or Rent Flats and Commercial Shops',
         forms_sub: 'Verified buyers, sellers, and tenants across 22 panchayats of Bhabua and all blocks of Kaimur',
         tab_sell: 'Sell Property',
@@ -1369,7 +1386,6 @@
       hi: {
         btn_text: 'English',
         top_alert: 'भभुआ और कैमूर : ज़मीन खरीद-बिक्री, मकान, फ्लैट और दुकान किराए पर उपलब्ध',
-        timing: '<i class="fa-regular fa-clock text-brand-500"></i> सोम - रवि : 8 AM - 9 PM',
         tagline: 'भभुआ और कैमूर प्रॉपर्टी व रेंटल पोर्टल',
         nav_home: 'होम',
         nav_properties: 'उपलब्ध प्रॉपर्टीज़',
@@ -1393,8 +1409,8 @@
         sec_prop_title: 'भभुआ और कैमूर : ज़मीन, मकान, दुकान व फ्लैट्स',
         sec_prop_sub: 'अपनी पसंद अनुसार फिल्टर करके तुरंत ओनर से सीधा संपर्क करें',
         filter_all: 'सभी (All)',
-        filter_flat: '🏠 फ्लैट किराए पर (Flat Rent)',
-        filter_shop: '🔥 दुकान किराए पर (Shop Rent)',
+        filter_flat: 'फ्लैट किराए पर (Flat Rent)',
+        filter_shop: 'दुकान किराए पर (Shop Rent)',
         filter_plot: 'रेजिडेंशियल प्लॉट (डिसमिल)',
         filter_farm: 'खेती की ज़मीन (बीघा)',
         card_flat_badge: '<i class="fa-solid fa-house-chimney-window"></i> फ्लैट किराए पर उपलब्ध',
@@ -1409,7 +1425,7 @@
         lbl_parking: 'पार्किंग :',
         c1_park: 'बाइक व छोटी कार पार्किंग',
         btn_rent_flat_inq: 'फ्लैट देखने के लिए संपर्क करें',
-        card_shop_badge: '<i class="fa-solid fa-shop"></i> दुकान किराए पर उपलब्ध',
+        card_shop_badge: '<i class="fa-solid fa-store"></i> दुकान किराए पर उपलब्ध',
         c2_loc: 'एकता चौक मेन मार्केट, भभुआ',
         c2_title: 'ग्राउंड फ्लोर पर रेडी टू मूव कमर्शियल दुकान',
         lbl_size: 'साइज़ :',
@@ -1455,6 +1471,7 @@
         emi_years: 'अवधि (Years) :',
         emi_monthly: 'अनुमानित मासिक EMI',
         emi_btn: 'लोन हेल्प लें',
+        coverage_badge: 'लोकल कवरेज',
         forms_head: 'प्रॉपर्टी बेचें, खरीदें या फ्लैट व दुकान रेंट पर लें / दें',
         forms_sub: 'कैमूर की 22 पंचायतों और सभी ब्लॉक के वेरिफाइड खरीदार, विक्रेता व किराएदार',
         tab_sell: 'प्रॉपर्टी बेचें',
@@ -1531,14 +1548,14 @@
 
       document.querySelectorAll('[data-i18n]').forEach(elem => {
         const key = elem.getAttribute('data-i18n');
-        if (dict[currentLang][key]) {
+        if (dict[currentLang] && dict[currentLang][key]) {
           elem.innerHTML = dict[currentLang][key];
         }
       });
       calcEMI();
     }
 
-    // Page Load Initialization
+    // Initialize on page load
     renderDirectoryTiles();
     convertLand(25);
     calcEMI();
